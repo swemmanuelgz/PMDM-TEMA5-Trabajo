@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Layout para la actividad de detalle que muestra la información del recurso -->
 <ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/detail_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -11,30 +11,28 @@
         android:layout_height="wrap_content"
         android:padding="16dp">
 
-        <!-- Título del recurso -->
+        <!-- Información básica -->
         <TextView
             android:id="@+id/detail_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:text="Título"
             android:textStyle="bold"
-            android:textSize="20sp"
-            android:text="Título"/>
+            android:textSize="20sp"/>
 
-        <!-- URL o nombre del recurso -->
         <TextView
             android:id="@+id/detail_url"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="URL"/>
 
-        <!-- Tipo de recurso (VIDEO, AUDIO, WEB) -->
         <TextView
             android:id="@+id/detail_type"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Tipo"/>
 
-        <!-- VideoView para reproducir vídeos; inicialmente oculto -->
+        <!-- VideoView para recursos de vídeo -->
         <VideoView
             android:id="@+id/video_view"
             android:layout_width="match_parent"
@@ -42,11 +40,20 @@
             android:layout_marginTop="16dp"
             android:visibility="gone"/>
 
-        <!-- WebView para cargar recursos web; inicialmente oculto -->
+        <!-- WebView para recursos web -->
         <WebView
             android:id="@+id/web_view"
             android:layout_width="match_parent"
             android:layout_height="400dp"
+            android:layout_marginTop="16dp"
+            android:visibility="gone"/>
+
+        <!-- Botón para reproducir audio -->
+        <Button
+            android:id="@+id/play_audio_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Reproducir Audio"
             android:layout_marginTop="16dp"
             android:visibility="gone"/>
 
@@ -59,3 +66,5 @@
             android:layout_marginTop="16dp"/>
     </LinearLayout>
 </ScrollView>
+
+

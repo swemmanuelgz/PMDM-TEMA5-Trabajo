@@ -30,10 +30,12 @@ public class MainActivity extends AppCompatActivity {
         // Crear la lista de ítems multimedia
         List<MultimediaItem> items = new ArrayList<>();
         // Para vídeos y audios se usa el nombre del recurso (que se encuentra en res/raw)
-        items.add(new MultimediaItem("Video 1", "video1", MultimediaItem.Type.VIDEO));
-        items.add(new MultimediaItem("Video 2", "video2", MultimediaItem.Type.VIDEO));
-        items.add(new MultimediaItem("Audio 1", "audio1", MultimediaItem.Type.AUDIO));
-        items.add(new MultimediaItem("Audio 2", "audio2", MultimediaItem.Type.AUDIO));
+        // Vídeos (asegúrate de tener "cr7.mp4" y "gato.mp4" en res/raw)
+        items.add(new MultimediaItem("CR7", "cr7", MultimediaItem.Type.VIDEO));
+        items.add(new MultimediaItem("Gato", "gato", MultimediaItem.Type.VIDEO));
+        // Audios (asegúrate de tener "ojitos.mp3" y "renhenkharmacion.mp3" en res/raw)
+        items.add(new MultimediaItem("Ojitos", "ojitos", MultimediaItem.Type.AUDIO));
+        items.add(new MultimediaItem("Rehenkharmacion", "rehenkharmacion", MultimediaItem.Type.AUDIO));
         // Recursos web con URL completas
         items.add(new MultimediaItem("Google Finance", "https://www.google.com/finance/", MultimediaItem.Type.WEB));
         items.add(new MultimediaItem("Marca", "https://www.marca.com/", MultimediaItem.Type.WEB));
